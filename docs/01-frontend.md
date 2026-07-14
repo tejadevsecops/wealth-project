@@ -40,6 +40,25 @@ curl -fsSL https://rpm.nodesource.com/setup_22.x | bash -
 dnf install -y nodejs
 ```
 
+Why -fsSL is Popular
+You'll often see:
+Shell1curl -fsSL https://get.docker.com | sh2``Show more lines
+or
+Shell1curl -fsSL https://raw.githubusercontent.com/.../install.sh2 Show more lines
+because it:
+
+✅ Fails if the URL returns an HTTP error (-f)
+✅ Hides progress output (-s)
+✅ Still shows actual errors (-S)
+✅ Follows redirects automatically (-L)
+
+This makes it ideal for shell scripts and installation commands.
+Equivalent Long Form
+Shell1curl --fail --silent --show-error --location https://example.comShow more lines
+So curl -fsSL is essentially:
+
+"Download this URL quietly, follow redirects, show real errors, and fail if the HTTP request is unsuccessful."
+
 Verify the installation.
 
 ```shell
