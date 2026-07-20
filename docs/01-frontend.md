@@ -40,7 +40,6 @@ curl -fsSL https://rpm.nodesource.com/setup_22.x | bash -
 dnf install -y nodejs
 ```
 
-Comments
 Why -fsSL is Popular
 You'll often see:
 Shell1curl -fsSL https://get.docker.com | sh2``Show more lines
